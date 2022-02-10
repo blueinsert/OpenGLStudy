@@ -25,7 +25,6 @@ float lastX = SCR_WIDTH/2.0f;
 float lastY = SCR_HEIGHT/2.0f;
 float deltaTime;
 float lastFrame;
-float fov;
 
 int main()
 {
@@ -231,6 +230,16 @@ int main()
 		ourShader.setMat4("view", view);
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		ourShader.setMat4("projection", projection);
+
+		/*
+		glm::mat4 view = glm::mat4(1.0);
+		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+		ourShader.setMat4("view", view);
+		glm::mat4 projection = glm::mat4(1.0);
+		projection = glm::perspective<float>(glm::radians(45.0f), SCR_WIDTH / SCR_HEIGHT, 0.1f, 100.0f);
+		ourShader.setMat4("projection", projection);
+		*/
+
 		for (unsigned int i = 0; i < 10; i++)
 		{
 			glm::mat4 model = glm::mat4(1.0);
@@ -274,6 +283,10 @@ void processInput(GLFWwindow* window)
 		camera.ProcessKeyboard(LEFT, deltaTime);
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 		camera.ProcessKeyboard(RIGHT, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+		camera.ProcessKeyboard(UP, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+		camera.ProcessKeyboard(DOWN, deltaTime);
 	
 }
 

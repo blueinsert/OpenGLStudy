@@ -23,7 +23,7 @@
     <ProjectGuid>{B38DA384-1036-4C7C-A06E-7355C8DDAE87}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My3Texture</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

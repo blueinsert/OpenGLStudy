@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/install_manifest.txt\"")
+if (NOT EXISTS "E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/install_manifest.txt\"")
 endif()
 
-file(READ "D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/install_manifest.txt" files)
+file(READ "E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

@@ -27,7 +27,7 @@
     <ProjectGuid>{4EAA3407-23B3-4B34-8AE8-BF547484E1F9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>glad</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

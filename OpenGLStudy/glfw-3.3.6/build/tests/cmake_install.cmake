@@ -1,4 +1,4 @@
-# Install script for directory: D:/360Downloads/glfw-3.3.6/glfw-3.3.6/tests
+# Install script for directory: E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

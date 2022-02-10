@@ -22,8 +22,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5435848B-DC87-34EF-B73A-05593C2EEED2}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{56E2C216-B9E4-39C8-9BE7-97CAEA16959F}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>update_mappings</ProjectName>
@@ -105,14 +105,14 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\CMakeFiles\d717635c014415bc77b07bd2fa3d1216\update_mappings.rule">
+    <CustomBuild Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\CMakeFiles\a62428ba1582157ed8af4a187789e9f8\update_mappings.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Updating gamepad mappings from upstream repository</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src
+cd E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src
 if %errorlevel% neq 0 goto :cmEnd
-D:
+E:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P D:/360Downloads/glfw-3.3.6/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+"C:\Program Files\CMake\bin\cmake.exe" -P E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -121,16 +121,16 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Updating gamepad mappings from upstream repository</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src
+cd E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src
 if %errorlevel% neq 0 goto :cmEnd
-D:
+E:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P D:/360Downloads/glfw-3.3.6/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+"C:\Program Files\CMake\bin\cmake.exe" -P E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -139,16 +139,16 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Updating gamepad mappings from upstream repository</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src
+cd E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src
 if %errorlevel% neq 0 goto :cmEnd
-D:
+E:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P D:/360Downloads/glfw-3.3.6/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+"C:\Program Files\CMake\bin\cmake.exe" -P E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -157,16 +157,16 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Updating gamepad mappings from upstream repository</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src
+cd E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src
 if %errorlevel% neq 0 goto :cmEnd
-D:
+E:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P D:/360Downloads/glfw-3.3.6/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+"C:\Program Files\CMake\bin\cmake.exe" -P E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -175,16 +175,17 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\update_mappings</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/360Downloads/glfw-3.3.6/glfw-3.3.6/src/CMakeLists.txt</Message>
+    <CustomBuild Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/360Downloads/glfw-3.3.6/glfw-3.3.6 -BD:/360Downloads/glfw-3.3.6/glfw-3.3.6/build --check-stamp-file D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6 -BE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build --check-stamp-file E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -193,11 +194,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/360Downloads/glfw-3.3.6/glfw-3.3.6/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/360Downloads/glfw-3.3.6/glfw-3.3.6 -BD:/360Downloads/glfw-3.3.6/glfw-3.3.6/build --check-stamp-file D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6 -BE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build --check-stamp-file E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -206,11 +207,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/360Downloads/glfw-3.3.6/glfw-3.3.6/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/360Downloads/glfw-3.3.6/glfw-3.3.6 -BD:/360Downloads/glfw-3.3.6/glfw-3.3.6/build --check-stamp-file D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6 -BE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build --check-stamp-file E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -219,11 +220,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/360Downloads/glfw-3.3.6/glfw-3.3.6/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SD:/360Downloads/glfw-3.3.6/glfw-3.3.6 -BD:/360Downloads/glfw-3.3.6/glfw-3.3.6/build --check-stamp-file D:/360Downloads/glfw-3.3.6/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6 -BE:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build --check-stamp-file E:/WorkSpace/OpenGLStudy/OpenGLStudy/glfw-3.3.6/build/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,21 +233,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src\mappings.h.in">
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src\mappings.h.in">
     </None>
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\CMake\GenerateMappings.cmake">
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\CMake\GenerateMappings.cmake">
     </None>
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\update_mappings">
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\update_mappings">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\ZERO_CHECK.vcxproj">
-      <Project>{8C2A18FB-45AA-3451-B28B-4A5E73301692}</Project>
+    <ProjectReference Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\ZERO_CHECK.vcxproj">
+      <Project>{6184E527-F736-320D-A18E-82900F424B92}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

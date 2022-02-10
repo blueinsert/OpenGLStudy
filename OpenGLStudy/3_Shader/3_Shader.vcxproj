@@ -23,7 +23,7 @@
     <ProjectGuid>{C0947301-4B1E-4241-9C8F-072210BF6675}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My3Shader</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <ProjectName>2_Shader</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

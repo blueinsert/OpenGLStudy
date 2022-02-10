@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\CMakeFiles\1b25c10f0f95fe8f9e95601a6df9cf3e\uninstall.rule">
+    <CustomBuild Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\CMakeFiles\59bd81b55efabc53244518326f681342\uninstall.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\CMakeLists.txt" />
+    <CustomBuild Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\CMakeFiles\uninstall" />
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\CMakeFiles\uninstall" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{1E12DD62-DB55-311C-AD7F-E9FFFE898E57}</UniqueIdentifier>
+      <UniqueIdentifier>{716AB467-857A-3D35-A841-723AA54CF5CC}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\CMakeFiles\d717635c014415bc77b07bd2fa3d1216\update_mappings.rule">
+    <CustomBuild Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\CMakeFiles\a62428ba1582157ed8af4a187789e9f8\update_mappings.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src\CMakeLists.txt" />
+    <CustomBuild Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\src\mappings.h.in">
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\src\mappings.h.in">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\CMake\GenerateMappings.cmake" />
-    <None Include="D:\360Downloads\glfw-3.3.6\glfw-3.3.6\build\src\CMakeFiles\update_mappings" />
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\CMake\GenerateMappings.cmake" />
+    <None Include="E:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\build\src\CMakeFiles\update_mappings" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{1E12DD62-DB55-311C-AD7F-E9FFFE898E57}</UniqueIdentifier>
+      <UniqueIdentifier>{716AB467-857A-3D35-A841-723AA54CF5CC}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{341E297C-28A9-3514-8ECE-51914F373836}</UniqueIdentifier>
+      <UniqueIdentifier>{6B763004-4837-3DAF-A112-874D16FF34E7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
