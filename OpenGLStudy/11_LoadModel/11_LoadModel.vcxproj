@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F8547FE6-50C0-4DFD-BCD1-7C7076F156B3}</ProjectGuid>
+    <ProjectGuid>{1D88B69A-4BC8-430D-B5F8-04E6D39415B6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My10MultipleLights</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <RootNamespace>My11LoadModel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -92,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,6 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,6 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,17 +155,42 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\ThirdPart\glad\src\glad.c" />
-    <ClCompile Include="10_MultipleLights.cpp" />
+    <ClCompile Include="11_LoadModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="box_diffuse.png" />
     <Image Include="box_specular.png" />
+    <Image Include="Model\nanosuit\arm_dif.png" />
+    <Image Include="Model\nanosuit\arm_showroom_ddn.png" />
+    <Image Include="Model\nanosuit\arm_showroom_spec.png" />
+    <Image Include="Model\nanosuit\body_dif.png" />
+    <Image Include="Model\nanosuit\body_showroom_ddn.png" />
+    <Image Include="Model\nanosuit\body_showroom_spec.png" />
+    <Image Include="Model\nanosuit\glass_ddn.png" />
+    <Image Include="Model\nanosuit\glass_dif.png" />
+    <Image Include="Model\nanosuit\hand_dif.png" />
+    <Image Include="Model\nanosuit\hand_showroom_ddn.png" />
+    <Image Include="Model\nanosuit\hand_showroom_spec.png" />
+    <Image Include="Model\nanosuit\helmet_diff.png" />
+    <Image Include="Model\nanosuit\helmet_showroom_ddn.png" />
+    <Image Include="Model\nanosuit\helmet_showroom_spec.png" />
+    <Image Include="Model\nanosuit\leg_dif.png" />
+    <Image Include="Model\nanosuit\leg_showroom_ddn.png" />
+    <Image Include="Model\nanosuit\leg_showroom_spec.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="box_shader.fs" />
-    <None Include="box_shader.vs" />
+    <None Include="model_shader.fs" />
+    <None Include="model_shader.vs" />
     <None Include="light_shader.fs" />
     <None Include="light_shader.vs" />
+    <None Include="Model\nanosuit\nanosuit.blend" />
+    <None Include="Model\nanosuit\nanosuit.mtl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Model\nanosuit\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Model\nanosuit\nanosuit.obj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

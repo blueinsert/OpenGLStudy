@@ -8,10 +8,6 @@
 
 #include <Shader.h>
 
-#include <string>
-#include <vector>
-using namespace std;
-
 #define MAX_BONE_INFLUENCE 4
 
 struct Vertex {
@@ -33,16 +29,15 @@ struct Vertex {
 
 struct Texture {
 	unsigned int id;
-	string type;
-	string path;
+	std::string type;
+	std::string path;
 };
 
 class Mesh {
 public:
-	// mesh Data
-	vector<Vertex>       vertices;
+	vector<Vertex> vertices;
 	vector<unsigned int> indices;
-	vector<Texture>      textures;
+	std::vector<Texture>      textures;
 	unsigned int VAO;
 
 	// constructor
