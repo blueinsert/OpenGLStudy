@@ -69,7 +69,7 @@ int main()
 	Shader modelShader("model_shader.vs", "model_shader.fs");
 	//Shader lightShader("light_shader.vs", "light_shader.fs");
 
-	Model nanosuitModel = Model("nanosuit.obj");
+	Model nanosuitModel = Model("./Model/nanosuit/nanosuit.obj");
 
 	glEnable(GL_DEPTH_TEST);
 

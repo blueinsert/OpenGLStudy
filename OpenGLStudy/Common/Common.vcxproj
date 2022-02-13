@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../ThirdPart/assimp/include;../ThirdPart/glad/include;../ThirdPart/glm/include;../ThirdPart/glfw-3.3.6/include;../ThirdPart/stb_image/include;./;$(IncludePath)</IncludePath>
+    <IncludePath>../ThirdPart/assimp/include;../ThirdPart/glad/include;../ThirdPart/glm/include;../ThirdPart/glfw-3.3.6/include;../ThirdPart/stb_image/include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>

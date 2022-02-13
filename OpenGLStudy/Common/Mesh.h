@@ -8,6 +8,9 @@
 
 #include <Shader.h>
 
+#include <vector>
+using namespace std;
+
 #define MAX_BONE_INFLUENCE 4
 
 struct Vertex {
@@ -22,9 +25,9 @@ struct Vertex {
 	// bitangent
 	glm::vec3 Bitangent;
 	//bone indexes which will influence this vertex
-	int m_BoneIDs[MAX_BONE_INFLUENCE];
+	//int m_BoneIDs[MAX_BONE_INFLUENCE];
 	//weights from each bone
-	float m_Weights[MAX_BONE_INFLUENCE];
+	//float m_Weights[MAX_BONE_INFLUENCE];
 };
 
 struct Texture {
@@ -35,13 +38,13 @@ struct Texture {
 
 class Mesh {
 public:
-	vector<Vertex> vertices;
-	vector<unsigned int> indices;
+    std::vector<Vertex> vertices;
+	std::vector<unsigned int> indices;
 	std::vector<Texture>      textures;
 	unsigned int VAO;
 
 	// constructor
-	Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
+	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures)
 	{
 		this->vertices = vertices;
 		this->indices = indices;
@@ -75,11 +78,11 @@ public:
 				number = std::to_string(heightNr++); // transfer unsigned int to string
 
 													 // now set the sampler to the correct texture unit
-			glUniform1i(glGetUniformLocation(shader.ID, (name + number).c_str()), i);
+			glUniform1i(glGetUniformLocation(shader.ID, ("material."+name + number).c_str()), i);
 			// and finally bind the texture
 			glBindTexture(GL_TEXTURE_2D, textures[i].id);
 		}
-
+		shader.setFloat("material.shininess", 128);
 		// draw mesh
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(indices.size()), GL_UNSIGNED_INT, 0);
@@ -129,13 +132,13 @@ private:
 		glEnableVertexAttribArray(4);
 		glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
 		// ids
-		glEnableVertexAttribArray(5);
-		glVertexAttribIPointer(5, 4, GL_INT, sizeof(Vertex), (void*)offsetof(Vertex, m_BoneIDs));
+		//glEnableVertexAttribArray(5);
+		//glVertexAttribIPointer(5, 4, GL_INT, sizeof(Vertex), (void*)offsetof(Vertex, m_BoneIDs));
 
 		// weights
-		glEnableVertexAttribArray(6);
-		glVertexAttribPointer(6, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_Weights));
-		glBindVertexArray(0);
+		//glEnableVertexAttribArray(6);
+		//glVertexAttribPointer(6, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_Weights));
+		//glBindVertexArray(0);
 	}
 };
 #endif

@@ -106,9 +106,4 @@
       <Filter>资源文件</Filter>
     </Text>
   </ItemGroup>
-  <ItemGroup>
-    <Object Include="Model\nanosuit\nanosuit.obj">
-      <Filter>资源文件</Filter>
-    </Object>
-  </ItemGroup>
 </Project>
