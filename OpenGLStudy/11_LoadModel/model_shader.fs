@@ -141,11 +141,11 @@ void main()
     vec3 result = vec3(0,0,0);
     result += CalcDirLight(dirLight, norm, viewDir);
     // 第二阶段：点光源
-    //for(int i = 0; i < NR_POINT_LIGHTS; i++)
-    //    result += CalcPointLight(pointLights[i], norm, WPos, viewDir);    
+    for(int i = 0; i < NR_POINT_LIGHTS; i++)
+        result += CalcPointLight(pointLights[i], norm, WPos, viewDir);    
     // 第三阶段：聚光
-    //result += CalcSpotLight(spotLight, norm, WPos, viewDir);    
+    result += CalcSpotLight(spotLight, norm, WPos, viewDir);    
 
     FragColor = vec4(result, 1.0);
-	FragColor = vec4(dirLight.direction, 1.0);
+	//FragColor = vec4(viewDir, 1.0);
 }
