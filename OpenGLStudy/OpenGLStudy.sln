@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenGLAdvance", "OpenGLAdva
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_DepthTesting", "13_DepthTesting\13_DepthTesting.vcxproj", "{ECB14EAE-82E1-4070-B780-86DFBCDD34DB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_StencilTesting", "14_StencilTesting\14_StencilTesting.vcxproj", "{97E360D5-C10A-4881-8679-70A891A8900F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -437,12 +439,37 @@ Global
 		{ECB14EAE-82E1-4070-B780-86DFBCDD34DB}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{ECB14EAE-82E1-4070-B780-86DFBCDD34DB}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{ECB14EAE-82E1-4070-B780-86DFBCDD34DB}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Debug|Win32.Build.0 = Debug|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Debug|x64.ActiveCfg = Debug|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Debug|x64.Build.0 = Debug|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Debug|x86.ActiveCfg = Debug|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Debug|x86.Build.0 = Debug|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.MinSizeRel|x64.ActiveCfg = Release|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.MinSizeRel|x64.Build.0 = Release|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.MinSizeRel|x86.ActiveCfg = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.MinSizeRel|x86.Build.0 = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Release|Win32.ActiveCfg = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Release|Win32.Build.0 = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Release|x64.ActiveCfg = Release|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Release|x64.Build.0 = Release|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Release|x86.ActiveCfg = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.Release|x86.Build.0 = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{97E360D5-C10A-4881-8679-70A891A8900F}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{97E360D5-C10A-4881-8679-70A891A8900F}.RelWithDebInfo|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ECB14EAE-82E1-4070-B780-86DFBCDD34DB} = {72ABA335-5003-444A-89CE-CEFE42B898AF}
+		{97E360D5-C10A-4881-8679-70A891A8900F} = {72ABA335-5003-444A-89CE-CEFE42B898AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D8AB3C1-B3B3-4543-877D-8DB22764C237}
