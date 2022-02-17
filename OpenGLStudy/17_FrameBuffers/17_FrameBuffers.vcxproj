@@ -23,7 +23,7 @@
     <ProjectGuid>{1FF76563-C453-4BAB-8F79-FCE36461F6C8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My17FrameBuffers</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../ThirdPart/assimp/include;../ThirdPart/glad/include;../ThirdPart/glm/include;../ThirdPart/glfw-3.3.6/include;../ThirdPart/stb_image/include;../Common;$(IncludePath)</IncludePath>
-    <LibraryPath>../ThirdPart/glfw-3.3.6/lib;../ThirdPart/assimp/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../ThirdPart/assimp/include;../ThirdPart/glad/include;../ThirdPart/glm/include;../ThirdPart/glfw-3.3.6/include;../ThirdPart/stb_image/include;../Common;../ThirdPart/IMGui/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../ThirdPart/glfw-3.3.6/lib;../ThirdPart/assimp/lib;../ThirdPart/IMGui/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -96,7 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;IMGui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -156,10 +156,15 @@
   <ItemGroup>
     <None Include="framebuffers.fs" />
     <None Include="framebuffers.vs" />
-    <None Include="framebuffers_screen.fs" />
+    <None Include="postEffect_blurring.fs" />
+    <None Include="postEffect_edgeSharpening.fs" />
+    <None Include="postEffect_gray.fs" />
+    <None Include="postEffect_invert.fs" />
     <None Include="framebuffers_screen.vs" />
+    <None Include="postEffect_none.fs" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="container.jpg" />
     <Image Include="marble.jpg" />
     <Image Include="metal.png" />
   </ItemGroup>

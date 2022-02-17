@@ -29,10 +29,22 @@
     <None Include="framebuffers.fs">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="framebuffers_screen.fs">
+    <None Include="framebuffers_screen.vs">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="framebuffers_screen.vs">
+    <None Include="postEffect_invert.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="postEffect_blurring.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="postEffect_edgeSharpening.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="postEffect_gray.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="postEffect_none.fs">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
@@ -41,6 +53,9 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="metal.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="container.jpg">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
