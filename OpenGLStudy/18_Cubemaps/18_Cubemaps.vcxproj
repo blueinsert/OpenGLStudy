@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1FF76563-C453-4BAB-8F79-FCE36461F6C8}</ProjectGuid>
+    <ProjectGuid>{B5CADF06-7178-461D-9909-54BA8370A48A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My17FrameBuffers</RootNamespace>
+    <RootNamespace>My18Cubemaps</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -96,7 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;IMGui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -151,22 +151,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\ThirdPart\glad\src\glad.c" />
-    <ClCompile Include="17_FrameBuffers.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="framebuffers.fs" />
-    <None Include="framebuffers.vs" />
-    <None Include="postEffect_blurring.fs" />
-    <None Include="postEffect_edgeSharpening.fs" />
-    <None Include="postEffect_gray.fs" />
-    <None Include="postEffect_invert.fs" />
-    <None Include="framebuffers_screen.vs" />
-    <None Include="postEffect_none.fs" />
+    <ClCompile Include="18_Cubemaps.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="container.jpg" />
-    <Image Include="marble.jpg" />
-    <Image Include="metal.png" />
+    <Image Include="skybox\back.jpg" />
+    <Image Include="skybox\bottom.jpg" />
+    <Image Include="skybox\front.jpg" />
+    <Image Include="skybox\left.jpg" />
+    <Image Include="skybox\right.jpg" />
+    <Image Include="skybox\top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cubemaps.fs" />
+    <None Include="cubemaps.vs" />
+    <None Include="skybox.fs" />
+    <None Include="skybox.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
