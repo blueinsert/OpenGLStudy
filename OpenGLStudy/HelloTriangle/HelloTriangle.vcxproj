@@ -23,7 +23,7 @@
     <ProjectGuid>{C24DAE55-4B53-4DBE-97F6-4EA657B5405E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>HelloTriangle</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <ProjectName>1_HelloTriangle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -43,7 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -73,8 +73,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\WorkSpace\OpenGLStudy\OpenGLStudy\glad\include;D:\WorkSpace\OpenGLStudy\OpenGLStudy\glfw-3.3.6\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\WorkSpace\OpenGLStudy\OpenGLStudy\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../ThirdPart/assimp/include;../ThirdPart/glad/include;../ThirdPart/glm/include;../ThirdPart/glfw-3.3.6/include;../ThirdPart/stb_image/include;../Common;../ThirdPart/IMGui/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../ThirdPart/glfw-3.3.6/lib;../ThirdPart/assimp/lib;../ThirdPart/IMGui/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\glad\src\glad.c" />
+    <ClCompile Include="..\ThirdPart\glad\src\glad.c" />
     <ClCompile Include="HelloTriangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
