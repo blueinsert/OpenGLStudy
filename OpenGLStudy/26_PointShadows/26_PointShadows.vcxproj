@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{9CB2CA17-8A8F-4E02-9FE4-64B5CE41F1C5}</ProjectGuid>
+    <ProjectGuid>{B3288E1B-94F2-4540-A2E7-ED0E902A8868}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My25ShadowMapping</RootNamespace>
+    <RootNamespace>My26PointShadows</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -92,7 +92,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,7 +107,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +123,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,7 +141,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,15 +151,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\ThirdPart\glad\src\glad.c" />
-    <ClCompile Include="25_ShadowMapping.cpp" />
+    <ClCompile Include="26_PointShadows.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="debug_quad.fs" />
-    <None Include="debug_quad.vs" />
-    <None Include="shadow_mapping.fs" />
-    <None Include="shadow_mapping.vs" />
-    <None Include="shadow_mapping_depth.fs" />
-    <None Include="shadow_mapping_depth.vs" />
+    <None Include="3.2.1.point_shadows.fs" />
+    <None Include="3.2.1.point_shadows.vs" />
+    <None Include="3.2.1.point_shadows_depth.fs" />
+    <None Include="3.2.1.point_shadows_depth.gs" />
+    <None Include="3.2.1.point_shadows_depth.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="wood.png" />

@@ -129,8 +129,13 @@ int main()
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, SHADOW_WIDTH, SHADOW_HEIGHT, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	//阴影贴图范围之外认为没有阴影
+	//使用(0,1)范围外的uv坐标对阴影贴图采样得到深度值永远为1，物体的深度不会大于1，
+    //永远不会在阴影中
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+	GLfloat borderColor[] = { 1.0, 1.0, 1.0, 1.0 };
+	glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
 	// attach depth texture as FBO's depth buffer
 	glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
 	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, depthMap, 0);
@@ -150,7 +155,7 @@ int main()
 	// lighting info
 	// -------------
 	glm::vec3 lightPos(-2.0f, 4.0f, -1.0f);
-
+	glEnable(GL_CULL_FACE);
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window))
@@ -172,6 +177,7 @@ int main()
 
 		// 1. render depth of scene to texture (from light's perspective)
 		// --------------------------------------------------------------
+		glCullFace(GL_FRONT);
 		glm::mat4 lightProjection, lightView;
 		glm::mat4 lightSpaceMatrix;
 		float near_plane = 1.0f, far_plane = 7.5f;
@@ -196,6 +202,7 @@ int main()
 
 		// 2. render scene as normal using the generated depth/shadow map  
 		// --------------------------------------------------------------
+		glCullFace(GL_BACK); // 不要忘记设回原先的culling face
 		glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		shader.use();
