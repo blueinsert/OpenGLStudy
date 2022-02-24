@@ -155,7 +155,7 @@ int main()
 	// lighting info
 	// -------------
 	glm::vec3 lightPos(-2.0f, 4.0f, -1.0f);
-	glEnable(GL_CULL_FACE);
+	//glEnable(GL_CULL_FACE);
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window))
@@ -177,7 +177,7 @@ int main()
 
 		// 1. render depth of scene to texture (from light's perspective)
 		// --------------------------------------------------------------
-		glCullFace(GL_FRONT);
+		//glCullFace(GL_FRONT);
 		glm::mat4 lightProjection, lightView;
 		glm::mat4 lightSpaceMatrix;
 		float near_plane = 1.0f, far_plane = 7.5f;
@@ -202,7 +202,7 @@ int main()
 
 		// 2. render scene as normal using the generated depth/shadow map  
 		// --------------------------------------------------------------
-		glCullFace(GL_BACK); // 不要忘记设回原先的culling face
+		//glCullFace(GL_BACK); // 不要忘记设回原先的culling face
 		glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		shader.use();

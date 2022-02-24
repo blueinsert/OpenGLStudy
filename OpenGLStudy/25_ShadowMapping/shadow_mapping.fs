@@ -25,7 +25,7 @@ float ShadowCalculation(vec4 fragPosLightSpace)
     // 取得当前片段在光源视角下的深度
     float currentDepth = projCoords.z;
     // 检查当前片段是否在阴影中
-    float bias = 0.05;
+    float bias = 0.0;// 0.05;
     float shadow = currentDepth - bias  > closestDepth  ? 1.0 : 0.0;
     //比产生shadowMap的裁剪矩阵的远平面更远，在此处不产生阴影
     if(currentDepth>=1.0)
