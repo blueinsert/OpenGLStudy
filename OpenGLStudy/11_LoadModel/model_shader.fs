@@ -3,8 +3,7 @@
 in vec3 Normal;
 in vec3 WPos;
 in vec2 TexCoords;
-in vec3 Tangent;
-in vec3 Bitangent;
+in mat3 TBN;
 
 out vec4 FragColor;
 
@@ -71,6 +70,8 @@ struct SpotLight {
 
 uniform SpotLight spotLight;
 
+uniform bool useNormalMapping;
+
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
 {
     vec3 lightDir = normalize(-light.direction);
@@ -135,6 +136,12 @@ void main()
 {
     // 属性
     vec3 norm = normalize(Normal);
+    if(useNormalMapping){
+        norm = NormalTexture(TexCoords).xyz;
+        // transform normal vector to range [-1,1]
+        norm = normalize(norm * 2.0 - 1.0);  // this normal is in tangent space
+        norm = TBN * norm;
+    }
     vec3 viewDir = normalize(viewPos - WPos);
 
     // 第一阶段：定向光照

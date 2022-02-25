@@ -12,16 +12,19 @@ uniform mat4 projection;
 out vec3 WPos;
 out vec3 Normal;
 out vec2 TexCoords;
-out vec3 Tangent;
-out vec3 Bitangent;
+out mat3 TBN;
 
 void main()
 {
     gl_Position = projection * view * model * vec4(aPos, 1.0);
 	WPos = vec3(model * vec4(aPos, 1.0));
-	//Normal = mat3(transpose(inverse(model))) * aNormal;
-	Normal = mat3(model) * aNormal;
+	mat3 normalMatrix = transpose(inverse(mat3(model)));
+    vec3 T = normalize(normalMatrix * aTangent);
+    vec3 N = normalize(normalMatrix * aNormal);
+    T = normalize(T - dot(T, N) * N);
+    vec3 B = cross(N, T);
+	//列主序，填充的依次第1,2,3列
+    TBN = mat3(T, B, N);
+	Normal = normalMatrix * aNormal;
 	TexCoords = aTexCoords;
-	Tangent = aTangent;
-	Bitangent = aBitangent;
 }

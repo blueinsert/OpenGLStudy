@@ -26,6 +26,10 @@ float lastY = SCR_HEIGHT / 2.0f;
 float deltaTime;
 float lastFrame;
 
+bool normalMapping = true;
+bool normalMappingKeyPressed = false;
+
+
 int main()
 {
 	// glfw: initialize and configure
@@ -217,6 +221,8 @@ int main()
 		modelShader.setVec3("spotLight.position", camera.Position);
 		modelShader.setVec3("spotLight.direction", camera.Front);
 
+		modelShader.setBool("useNormalMapping", normalMapping);
+
 		nanosuitModel.Draw(modelShader);
 
 		{
@@ -270,6 +276,15 @@ void processInput(GLFWwindow* window)
 	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
 		camera.ProcessKeyboard(DOWN, deltaTime);
 
+	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !normalMappingKeyPressed)
+	{
+		normalMapping = !normalMapping;
+		normalMappingKeyPressed = true;
+	}
+	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE)
+	{
+		normalMappingKeyPressed = false;
+	}
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
