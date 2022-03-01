@@ -48,6 +48,8 @@ void main()
         
         // range check & accumulate
         float rangeCheck = smoothstep(0.0, 1.0, radius / abs(fragPos.z - sampleDepth));
+        //view坐标系中z都是负值,越远越小
+        //samplePos比sampleDepth更远，说明采样点可能进入其他物体内部，增加环境遮罩量
         occlusion += (sampleDepth >= samplePos.z + bias ? 1.0 : 0.0) * rangeCheck;           
     }
     occlusion = 1.0 - (occlusion / kernelSize);
