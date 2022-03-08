@@ -26,8 +26,8 @@ float lastY = SCR_HEIGHT / 2.0f;
 float deltaTime;
 float lastFrame;
 
-bool normalMapping = true;
-bool normalMappingKeyPressed = false;
+bool showConvolutionMap = true;
+bool spaceKeyPressed = false;
 
 
 int main()
@@ -221,7 +221,7 @@ int main()
 		modelShader.setVec3("spotLight.position", camera.Position);
 		modelShader.setVec3("spotLight.direction", camera.Front);
 
-		modelShader.setBool("useNormalMapping", normalMapping);
+		modelShader.setBool("useNormalMapping", showConvolutionMap);
 
 		nanosuitModel.Draw(modelShader);
 
@@ -276,14 +276,14 @@ void processInput(GLFWwindow* window)
 	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
 		camera.ProcessKeyboard(DOWN, deltaTime);
 
-	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !normalMappingKeyPressed)
+	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !spaceKeyPressed)
 	{
-		normalMapping = !normalMapping;
-		normalMappingKeyPressed = true;
+		showConvolutionMap = !showConvolutionMap;
+		spaceKeyPressed = true;
 	}
 	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE)
 	{
-		normalMappingKeyPressed = false;
+		spaceKeyPressed = false;
 	}
 }
 
